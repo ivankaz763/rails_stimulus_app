@@ -1,0 +1,18 @@
+<h1><%= @foo.name %></h1>
+
+<p>
+  <li><%= button_to 'Edit', edit_foo_path(@foo), method: :get %></li>
+  <li><%= button_to "Destroy", foo_path(@foo), method: :delete, data: { turbo: false } %></li>
+</p>
+
+<h2>Bars</h2>
+
+<% @foo.bars.each do |bar| %>
+  <p>
+    <li><%= link_to bar.name, foo_bar_path(@foo, bar) %></li>
+  </p>
+<% end %>
+
+<h2>Add a bar:</h2>
+<%= render 'bars/form' %>
+<%= link_to 'Back', foos_path %>

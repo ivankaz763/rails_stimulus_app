@@ -1,0 +1,12 @@
+<h1>Edit Bar</h1>
+
+<%= form_with model: [@foo, @bar], url: foo_bar_path(@foo, @bar), method: :patch do |form| %>
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+<%= link_to 'Back to foo', foo_path(@foo) %>

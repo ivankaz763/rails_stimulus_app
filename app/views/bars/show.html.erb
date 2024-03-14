@@ -1,0 +1,8 @@
+<h1><%= @bar.name %></h1>
+
+<ul>
+  <li><%= button_to 'Edit', edit_foo_bar_path(@foo, @bar), method: :get%></li>
+  <li><%= button_to 'Destroy', foo_bar_path(@foo), method: :delete %></li>
+</ul>
+
+<%= link_to 'Back', @foo %>

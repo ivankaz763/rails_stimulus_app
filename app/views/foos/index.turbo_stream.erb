@@ -1,0 +1,7 @@
+<%= turbo_stream.update "loadUserData" do %>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <% @foos.each do |foo| %>
+      <li><%= link_to foo.name, foo, class: "btn btn-primary" %></li>
+    <% end %>
+  </div>
+<% end %>
